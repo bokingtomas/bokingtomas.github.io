@@ -3,7 +3,7 @@ title: Boking Tomas
 SEOTitle: bokingtomas
 header-img: img/post-bg-desk.jpg
 email: bokingtomas@gmail.com
-description: "Every failure is leading towards success."
+description: "10年前的网瘾少年，如今的网瘾青年"
 keyword: "cocos2d, u3d"
 url: "http://bokingtomas.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -11,7 +11,7 @@ github_repo: "https://github.com/bokingtomas/bokingtomas.github.io.git" # you co
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "百无聊赖的网瘾青年"
 sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
