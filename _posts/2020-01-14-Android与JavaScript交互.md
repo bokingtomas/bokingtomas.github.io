@@ -1,6 +1,4 @@
-# Android与JavaScript交互
-
-### Android與JavaScript交互的先決條件
+### 一、Android與JavaScript交互的先決條件
 1. 設置WebView可以執行JavaScript代碼
 
 ```
@@ -16,7 +14,7 @@ webview.addJavascriptInterface(mJSInterface, "pkb");
 ```
 addJavascriptInterface方法把Java對象綁定給JavaScript使用，同時指明JavaScript側別名"pkb"
 
-### JavaScript調用Android
+### 二、JavaScript調用Android
 假設WebViewJSInterface類如下:
 
 ```
@@ -41,7 +39,7 @@ public class WebViewJSInterface {
 pkb.printMessage("This is JS code.")
 ```
 
-### Android調用JavaScript
+### 三、Android調用JavaScript
 Android調用JavaScript方法，需要以字符串的方式進行調用，字符串前需要加"javascript:"，並且需要在UI線程（主線程）上調用
 ```
 final String evaluateStr = "javascript:callJSFunc('This is a Android message')"
@@ -110,7 +108,7 @@ AppActivity.instance.runOnUiThread(new Runnable() {
     }
 });
 ```
-### release包混淆問題
+### 四、release包混淆問題
 * 需要把WebViewJSInterface幾其內部的public方法，聲明為不混淆
 * 假設WebViewJSInterface類在包com.poker.webview內
 ```
