@@ -1,4 +1,16 @@
-### 一、Android與JavaScript交互的先決條件
+---
+layout:     post
+title:      Android與WebView交互
+subtitle:   给Android项目添加與WebView交互的能力
+date:       2020-01-14
+author:     bokingtomas
+header-img: img/post-bg-ios9-web.jpg
+catalog: true
+tags:
+    - Android
+    - JavaScript
+---
+### 一、Android與WebView交互的先決條件
 1. 設置WebView可以執行JavaScript代碼
 ```
 WebSettings settings = webview.getSettings();
