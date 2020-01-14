@@ -25,9 +25,9 @@ webview.addJavascriptInterface(mJSInterface, "pkb");
 addJavascriptInterface方法把Java對象綁定給JavaScript使用，同時指明JavaScript側別名"pkb"
 
 ### 二、JavaScript調用Android
-要想使JavaScript调用Android方法，此方法必须满足两个条件：   
-1. 此方法是public   
-2. 必须加上@JavascriptInterface标签   
+要想使JavaScript调用Android方法，此方法必须满足两个条件：
+1. 此方法是public
+2. 必须加上@JavascriptInterface标签
 
 假設WebViewJSInterface類如下:
 ```
