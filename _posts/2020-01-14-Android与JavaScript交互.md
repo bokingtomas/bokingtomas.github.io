@@ -1,13 +1,11 @@
 ### 一、Android與JavaScript交互的先決條件
 1. 設置WebView可以執行JavaScript代碼
-
 ```
 WebSettings settings = webview.getSettings();
 settings.setJavaScriptEnabled(true);        // 啟用JS
 ```
 
 2. 給WebView綁定一個接口對象
-
 ```
 mJSInterface = new WebViewJSInterface(webview, mCallback);
 webview.addJavascriptInterface(mJSInterface, "pkb");
@@ -15,8 +13,11 @@ webview.addJavascriptInterface(mJSInterface, "pkb");
 addJavascriptInterface方法把Java對象綁定給JavaScript使用，同時指明JavaScript側別名"pkb"
 
 ### 二、JavaScript調用Android
-假設WebViewJSInterface類如下:
+要想使JavaScript调用Android方法，此方法必须满足两个条件：   
+1. 此方法是public   
+2. 必须加上@JavascriptInterface标签   
 
+假設WebViewJSInterface類如下:
 ```
 public class WebViewJSInterface {
     private WebView mWebView;
@@ -34,7 +35,6 @@ public class WebViewJSInterface {
 }
 ```
 在JavaScript側代碼調用Android方法printMessage:
-
 ```
 pkb.printMessage("This is JS code.")
 ```
